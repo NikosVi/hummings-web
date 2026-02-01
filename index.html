@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hummings | Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        /* Βασικά Στυλ */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a; /* Μαύρο φόντο όπως το logo */
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Header & Logo */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            background: linear-gradient(to bottom, #1a1a1a, #0a0a0a);
+        }
+
+        .logo-container img {
+            max-width: 300px;
+            height: auto;
+            filter: drop-shadow(0 0 15px rgba(68, 73, 73, 0.3)); /* Neon λάμψη */
+        }
+
+        /* Πλοήγηση */
+        nav {
+            margin-top: 30px;
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #2e3738; /* Cyan χρώμα από το logo */
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            min-height: 50vh;
+        }
+
+        h2 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #2e3738;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        /* Music Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #2e3738;
+        }
+        .music-player {
+        margin-top: 20px;
+        border-radius: 8px;
+        overflow: hidden; /* Για να στρογγυλέψουν οι γωνίες του player */
+        background: #000;
+        }
+
+        /* Footer */
+        footer {
+            padding: 50px;
+            background: #000;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .social-links a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <nav>
+        <ul>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#bio">BIO</a></li>
+            <li><a href="#merch">Merch</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#lives">Lives</a></li>
+        </ul>
+    </nav>
+        <header>
+        <div class="logo-container">
+            <img src="Logo.jpg" alt="Hummings Logo">
+        </div>
+    </header>
+
+    <section id="music">
+        <h2>Music</h2>
+        <div class="grid">
+
+            <div class="card">
+                <h3>Live At Ilion Plus</h3>
+                    <div class="music-player">
+                        <p>Listen now</p>
+                            <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=1322719350/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://hummings.bandcamp.com/album/live-at-ilion-plus">Live At Ilion Plus by Hummings</a>
+                            </iframe>
+                    </div>
+            </div>
+            <div class="card">
+                <h3>3PV</h3>
+                    <div class="music-player">
+                        <p>Listen Now</p>
+                            <iframe style="border: 0; width: 350px; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=2113147713/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://hummings.bandcamp.com/track/3-p-v">3 P V by Hummings</a>
+                            </iframe>
+                    </div>
+            </div>
+            <div class="card">
+                <h3>Κύλα Γιαουρτοπόταμε</h3>
+                    <div class="music-player">
+                        <p>Listen Now</p>
+                        <iframe style="border: 0; width: 350px; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=371933973/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://hummings.bandcamp.com/track/-">Κύλα Γιαουρτοπόταμε by Hummings</a>
+                        </iframe>
+                    </div>
+            </div>
+            <div class="card">
+                <h3>Songs Of Gaia (Full EP)</h3>
+                    <div class="music-player">
+                        <p>Listen Now</p>
+                            <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3044278741/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://hummings.bandcamp.com/album/songs-of-gaia">Songs of Gaia by Hummings</a>
+                            </iframe>
+                    </div>
+            </div>
+            <div class="card">
+                <h3>Aeginitikos</h3>
+                    <div class="music-player">
+                        <p>Listen Now</p>
+                            <iframe style="border: 0; width: 350px; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=1263083166/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://hummings.bandcamp.com/track/aeginitikos">Aeginitikos by Hummings</a>
+                            </iframe>
+                    </div>
+            </div>
+            <div class="card">
+                <h3>Calypso</h3>
+                    <div class="music-player">
+                        <p>Listen Now</p>
+                            <iframe style="border: 0; width: 350px; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=2446938385/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://hummings.bandcamp.com/track/calypso">Calypso by Hummings</a>
+                            </iframe>
+                    </div>
+            </div>
+            <div class="card">
+                <h3>Egrec (Full EP)</h3>
+                    <div class="music-player">
+                        <p>Listen Now</p>
+                        <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=528590923/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://hummings.bandcamp.com/album/egrec">Egrec by Hummings</a></iframe>                </iframe>
+                        </div>
+                </div>
+        </div>
+    </section>
+
+        <section id="bio">
+        <h2>BIO</h2>
+        <p>Γεια σου φίλε. εδω θα σου γραψω τι bio φιλαρακο μλεμ</p>
+    </section>
+
+    <section id="merch">
+        <h2>Merch</h2>
+        <div class="grid">
+            <div class="card">
+                <div style="background: #222; height: 200px; margin-bottom: 15px;"></div>
+                <h3>T-Shirt "Lines"</h3>
+                <p>25.00€</p>
+            </div>
+            <div class="card">
+                <div style="background: #222; height: 200px; margin-bottom: 15px;"></div>
+                <h3>Limited Vinyl</h3>
+                <p>35.00€</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos">
+        <h2>Videos</h2>
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 800px; margin: 0 auto; background: #111;">
+            <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JoAQRWhIxzQ?si=iI6tWGDOEGrTSjof" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </p>
+        </div>
+    </section>
+
+    <section id="lives">
+        <h2>Lives</h2>
+        <div id="lives-container" class="card" style="max-width: 800px; margin: 0 auto; background: #111; padding: 20px; text-align: left;">
+            <table id="lives-table" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="border-bottom: 2px solid #2e3738;">
+                        <th  style ="padding: 10px;">Date</th>
+                        <th  style ="padding: 10px;">Venue</th>
+                    </tr>
+                </thead>
+                <tbody id="lives-body">
+                    <tr>
+                        <td colspan="2" style="padding: 20px; text-align: center">No upcoming lives scheduled.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Spotify</a>
+        </div>
+        <p>© 2024 Hummings Band. All rights reserved.</p>
+    </footer>
+
+    <script>
+        async function loadLives() {
+            try {
+                const response = await fetch('lives.xlsx');
+                const arrayBuffer = await response.arrayBuffer();
+                const data = new Uint8Array(arrayBuffer);
+                const workbook = XLSX.read(data, { type: 'array' });
+                const firstSheetName = workbook.SheetNames[0];
+                const worksheet = workbook.Sheets[firstSheetName];
+                //Μετατροπή του φύλλου σε JSON
+                const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+                const livesBody = document.getElementById('lives-body');
+                livesBody.innerHTML = '';
+
+                jsonData.slice(1).forEach(row => {
+                    const tr = document.createElement('tr');
+                    row.forEach(cell => {
+                        const td = document.createElement('td');
+                        td.style.padding = '10px';
+                        td.textContent = cell;
+                        tr.appendChild(td);
+                    });
+                    livesBody.appendChild(tr);
+                });
+
+                if (jsonData.length <= 1) {
+                    const tr = document.createElement('tr');
+                    const td = document.createElement('td');
+                    td.colSpan = 2;
+                    td.style.padding = '20px';
+                    td.style.textAlign = 'center';
+                    td.textContent = 'No upcoming lives scheduled.';
+                    tr.appendChild(td);
+                    livesBody.appendChild(tr);
+                }
+            } catch (error) {
+                console.error('Error loading lives data:', error);
+            }
+        }
+        window.onload = loadLives;
+    </script>
+
+</body>
+</html>
